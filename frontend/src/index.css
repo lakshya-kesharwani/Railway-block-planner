@@ -1,0 +1,493 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-primary: #070C18;
+  --bg-secondary: #0E172B;
+  --bg-card: #131F38;
+  --bg-card-hover: #1A2A4C;
+  --bg-sidebar: #0E172B;
+  --bg-navbar: #0E172B;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #64748B;
+  --border-color: #1F345B;
+  --border-light: #2D4A7D;
+  --accent-orange: #FF6B00;
+  --accent-orange-light: #FFA04D;
+  --accent-blue: #1D4ED8;
+  --accent-blue-light: #38BDF8;
+  --accent-green: #10B981;
+  --accent-green-light: #34D399;
+  --accent-red: #EF4444;
+  --accent-yellow: #F59E0B;
+  --accent-purple: #8B5CF6;
+  --chart-grid: #1E2F4D;
+  --shadow-color: rgba(0, 0, 0, 0.37);
+  --grid-line: rgba(31, 52, 91, 0.25);
+  --track-line: rgba(56, 189, 248, 0.15);
+  --glass-background: rgba(19, 31, 56, 0.75);
+  --glass-border: rgba(45, 74, 125, 0.4);
+  --glass-hover-background: rgba(26, 42, 76, 0.85);
+  --glass-hover-border: rgba(56, 189, 248, 0.4);
+  --conflict-border-strong: rgba(239, 68, 68, 0.8);
+  --conflict-shadow-strong: rgba(239, 68, 68, 0.5);
+  --conflict-border-soft: rgba(239, 68, 68, 0.2);
+  --conflict-shadow-soft: rgba(239, 68, 68, 0.2);
+  --shadow-glow-orange: rgba(255, 107, 0, 0.4);
+  --shadow-glow-blue: rgba(56, 189, 248, 0.4);
+  --shadow-glow-green: rgba(16, 185, 129, 0.4);
+  --shadow-glow-red: rgba(239, 68, 68, 0.4);
+  --color-white: 255 255 255;
+  --color-black: 0 0 0;
+  --color-slate-100: 241 245 249;
+  --color-slate-200: 226 232 240;
+  --color-slate-300: 203 213 225;
+  --color-slate-400: 148 163 184;
+  --color-slate-500: 100 116 139;
+  --color-slate-600: 71 85 105;
+  --color-slate-700: 51 65 85;
+  --color-slate-800: 30 41 59;
+  --color-slate-900: 15 23 42;
+  --color-slate-950: 2 6 23;
+  --color-blue-300: 147 197 253;
+  --color-blue-400: 96 165 250;
+  --color-blue-500: 59 130 246;
+  --color-blue-600: 37 99 235;
+  --color-blue-950: 23 37 84;
+  --color-cyan-200: 165 243 252;
+  --color-cyan-300: 103 232 249;
+  --color-cyan-400: 34 211 238;
+  --color-cyan-500: 6 182 212;
+  --color-cyan-600: 8 145 178;
+  --color-cyan-950: 8 51 68;
+  --color-orange-200: 254 215 170;
+  --color-orange-300: 253 186 116;
+  --color-orange-400: 251 146 60;
+  --color-orange-500: 249 115 22;
+  --color-orange-600: 234 88 12;
+  --color-orange-950: 67 20 7;
+  --color-amber-200: 253 230 138;
+  --color-amber-300: 252 211 77;
+  --color-amber-400: 251 191 36;
+  --color-amber-500: 245 158 11;
+  --color-amber-600: 217 119 6;
+  --color-amber-950: 69 26 3;
+  --color-emerald-200: 167 243 208;
+  --color-emerald-300: 110 231 183;
+  --color-emerald-400: 52 211 153;
+  --color-emerald-500: 16 185 129;
+  --color-emerald-600: 5 150 105;
+  --color-emerald-800: 6 95 70;
+  --color-emerald-950: 2 44 34;
+  --color-green-400: 74 222 128;
+  --color-red-400: 248 113 113;
+  --color-red-700: 185 28 28;
+  --color-red-950: 69 10 10;
+  --color-rose-200: 254 205 211;
+  --color-rose-300: 253 164 175;
+  --color-rose-400: 251 113 133;
+  --color-rose-500: 244 63 94;
+  --color-rose-600: 225 29 72;
+  --color-rose-800: 159 18 57;
+  --color-rose-900: 136 19 55;
+  --color-rose-950: 76 5 25;
+  --color-purple-300: 216 180 254;
+  --color-purple-400: 192 132 252;
+  --color-purple-500: 168 85 247;
+  --color-purple-600: 147 51 234;
+  --color-purple-950: 59 7 100;
+  --color-indigo-400: 129 140 248;
+  --color-indigo-500: 99 102 241;
+  --color-indigo-700: 67 56 202;
+  --color-yellow-200: 254 240 138;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg-primary: #F5F3EF;
+  --bg-secondary: #E8E4DB;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FAF8F5;
+  --bg-sidebar: #E8E4DB;
+  --bg-navbar: #FFFFFF;
+  --text-primary: #1E293B;
+  --text-secondary: #334155;
+  --text-muted: #526177;
+  --border-color: #D3CDC2;
+  --border-light: #ABA496;
+  --accent-orange: #C2410C;
+  --accent-orange-light: #9A3412;
+  --accent-blue: #1D4ED8;
+  --accent-blue-light: #0369A1;
+  --accent-green: #047857;
+  --accent-green-light: #065F46;
+  --accent-red: #B91C1C;
+  --accent-yellow: #92400E;
+  --accent-purple: #6D28D9;
+  --chart-grid: #D8D2C6;
+  --shadow-color: rgba(44, 39, 32, 0.08);
+  --grid-line: rgba(180, 172, 160, 0.22);
+  --track-line: rgba(194, 65, 12, 0.15);
+  --glass-background: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(180, 172, 160, 0.55);
+  --glass-hover-background: rgba(250, 248, 245, 0.96);
+  --glass-hover-border: rgba(194, 65, 12, 0.45);
+  --conflict-border-strong: rgba(185, 28, 28, 0.8);
+  --conflict-shadow-strong: rgba(185, 28, 28, 0.2);
+  --conflict-border-soft: rgba(185, 28, 28, 0.2);
+  --conflict-shadow-soft: rgba(185, 28, 28, 0.1);
+  --shadow-glow-orange: rgba(194, 65, 12, 0.2);
+  --shadow-glow-blue: rgba(3, 105, 161, 0.2);
+  --shadow-glow-green: rgba(4, 120, 87, 0.2);
+  --shadow-glow-red: rgba(185, 28, 28, 0.2);
+  --color-white: 30 41 59;
+  --color-black: 255 255 255;
+  --color-slate-100: 30 41 59;
+  --color-slate-200: 51 65 85;
+  --color-slate-300: 71 85 105;
+  --color-slate-400: 82 97 119;
+  --color-slate-500: 100 116 139;
+  --color-slate-600: 148 163 184;
+  --color-slate-700: 211 205 194;
+  --color-slate-800: 228 223 214;
+  --color-slate-900: 242 238 230;
+  --color-slate-950: 249 247 243;
+  --color-blue-300: 30 64 175;
+  --color-blue-400: 29 78 216;
+  --color-blue-500: 37 99 235;
+  --color-blue-600: 29 78 216;
+  --color-blue-950: 219 234 254;
+  --color-cyan-200: 14 116 144;
+  --color-cyan-300: 14 116 144;
+  --color-cyan-400: 8 145 178;
+  --color-cyan-500: 8 145 178;
+  --color-cyan-600: 14 116 144;
+  --color-cyan-950: 207 250 254;
+  --color-orange-200: 154 52 18;
+  --color-orange-300: 194 65 12;
+  --color-orange-400: 194 65 12;
+  --color-orange-500: 234 88 12;
+  --color-orange-600: 194 65 12;
+  --color-orange-950: 255 237 213;
+  --color-amber-200: 146 64 14;
+  --color-amber-300: 180 83 9;
+  --color-amber-400: 180 83 9;
+  --color-amber-500: 217 119 6;
+  --color-amber-600: 180 83 9;
+  --color-amber-950: 254 243 199;
+  --color-emerald-200: 4 120 87;
+  --color-emerald-300: 4 120 87;
+  --color-emerald-400: 4 120 87;
+  --color-emerald-500: 5 150 105;
+  --color-emerald-600: 4 120 87;
+  --color-emerald-800: 6 95 70;
+  --color-emerald-950: 209 250 229;
+  --color-green-400: 22 101 52;
+  --color-red-400: 185 28 28;
+  --color-red-700: 153 27 27;
+  --color-red-950: 254 226 226;
+  --color-rose-200: 159 18 57;
+  --color-rose-300: 190 24 93;
+  --color-rose-400: 190 24 93;
+  --color-rose-500: 225 29 72;
+  --color-rose-600: 190 24 93;
+  --color-rose-800: 159 18 57;
+  --color-rose-900: 255 228 230;
+  --color-rose-950: 255 241 242;
+  --color-purple-300: 107 33 168;
+  --color-purple-400: 126 34 206;
+  --color-purple-500: 147 51 234;
+  --color-purple-600: 126 34 206;
+  --color-purple-950: 250 245 255;
+  --color-indigo-400: 67 56 202;
+  --color-indigo-500: 79 70 229;
+  --color-indigo-700: 55 48 163;
+  --color-yellow-200: 133 77 14;
+}
+
+@layer base {
+  html,
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  body {
+    @apply bg-railway-bg text-railway-text min-h-screen overflow-x-hidden;
+  }
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue-light);
+}
+
+/* Railway grid background pattern */
+.railway-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
+
+.railway-track-lines {
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 19px,
+    var(--track-line) 19px,
+    var(--track-line) 20px
+  );
+}
+
+/* Glassmorphic card styling */
+.glass-panel {
+  background: var(--glass-background);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-panel-hover:hover {
+  background: var(--glass-hover-background);
+  border-color: var(--glass-hover-border);
+  box-shadow: 0 8px 24px -4px var(--shadow-color);
+}
+
+/* Shimmer pulse for pipeline and conflict */
+@keyframes pulse-border {
+  0%, 100% { border-color: var(--conflict-border-strong); box-shadow: 0 0 15px var(--conflict-shadow-strong); }
+  50% { border-color: var(--conflict-border-soft); box-shadow: 0 0 4px var(--conflict-shadow-soft); }
+}
+
+.animate-conflict-pulse {
+  animation: pulse-border 1.5s infinite ease-in-out;
+}
+
+@keyframes pipeline-flow {
+  0% { stroke-dashoffset: 24; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.animate-flow-dash {
+  stroke-dasharray: 6 6;
+  animation: pipeline-flow 1.2s linear infinite;
+}
+
+/* ==========================================================================
+   Sidebar Badges & Containment Pills
+   Ensures badges have dynamic fit-content width, proper padding, no text overflow,
+   and crisp pill borders in both dark and light modes.
+   ========================================================================== */
+.sidebar-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  width: fit-content;
+  max-width: 100%;
+  min-width: 24px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: 9999px;
+  letter-spacing: 0.01em;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+}
+
+.sidebar-badge-amber {
+  background-color: rgba(245, 158, 11, 0.18);
+  color: #FCD34D;
+  border: 1px solid rgba(245, 158, 11, 0.45);
+}
+
+.sidebar-badge-cyan {
+  background-color: rgba(6, 182, 212, 0.18);
+  color: #67E8F9;
+  border: 1px solid rgba(6, 182, 212, 0.45);
+}
+
+.sidebar-badge-rose {
+  background-color: rgba(244, 63, 94, 0.2);
+  color: #FDA4AF;
+  border: 1px solid rgba(244, 63, 94, 0.5);
+  box-shadow: 0 0 10px -2px rgba(244, 63, 94, 0.3);
+}
+
+.sidebar-badge-emerald {
+  background-color: rgba(16, 185, 129, 0.18);
+  color: #6EE7B7;
+  border: 1px solid rgba(16, 185, 129, 0.45);
+}
+
+.sidebar-badge-orange {
+  background-color: rgba(249, 115, 22, 0.18);
+  color: #FDBA74;
+  border: 1px solid rgba(249, 115, 22, 0.45);
+}
+
+/* Light Mode Overrides for high contrast readability */
+[data-theme="light"] .sidebar-badge-amber {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FCD34D;
+}
+
+[data-theme="light"] .sidebar-badge-cyan {
+  background-color: #CFFAFE;
+  color: #0E7490;
+  border: 1px solid #67E8F9;
+}
+
+[data-theme="light"] .sidebar-badge-rose {
+  background-color: #FFE4E6;
+  color: #9F1239;
+  border: 1px solid #FDA4AF;
+  box-shadow: 0 1px 3px rgba(159, 18, 57, 0.1);
+}
+
+[data-theme="light"] .sidebar-badge-emerald {
+  background-color: #D1FAE5;
+  color: #065F46;
+  border: 1px solid #6EE7B7;
+}
+
+[data-theme="light"] .sidebar-badge-orange {
+  background-color: #FFEDD5;
+  color: #9A3412;
+  border: 1px solid #FDBA74;
+}
+
+/* ==========================================================================
+   Header Conflict Alert Banner & Brand Action Button
+   Ensures WCAG AA contrast, proper warning red tone, and consistent brand orange.
+   ========================================================================== */
+.header-conflict-alert {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Dark Mode: deep alert red container with high-contrast text */
+[data-theme="dark"] .header-conflict-alert,
+.dark .header-conflict-alert {
+  background-color: rgba(69, 10, 10, 0.75); /* Deep red: #450A0A */
+  border: 1px solid rgba(239, 68, 68, 0.5);   /* Alert red: #EF4444 */
+  box-shadow: 0 0 15px -3px rgba(220, 38, 38, 0.3);
+}
+
+[data-theme="dark"] .header-conflict-alert .alert-title,
+.dark .header-conflict-alert .alert-title {
+  color: #FEE2E2; /* Contrast > 11:1 on #450A0A (WCAG AAA) */
+}
+
+[data-theme="dark"] .header-conflict-alert .alert-subtitle,
+.dark .header-conflict-alert .alert-subtitle {
+  color: #FCA5A5; /* Contrast > 7:1 on #450A0A (WCAG AA) */
+}
+
+[data-theme="dark"] .header-conflict-alert .alert-icon,
+.dark .header-conflict-alert .alert-icon {
+  color: #EF4444; /* Alert red */
+}
+
+/* Light Mode: crisp warning red container with dark crimson text */
+[data-theme="light"] .header-conflict-alert,
+.light .header-conflict-alert {
+  background-color: #FEF2F2; /* Soft alert red surface: #FEF2F2 */
+  border: 1px solid #F87171; /* Visible alert red border: #F87171 */
+  box-shadow: 0 1px 3px rgba(185, 28, 28, 0.1);
+}
+
+[data-theme="light"] .header-conflict-alert .alert-title,
+.light .header-conflict-alert .alert-title {
+  color: #991B1B; /* Dark crimson: #991B1B. Contrast 8.4:1 on #FEF2F2 (WCAG AAA) */
+}
+
+[data-theme="light"] .header-conflict-alert .alert-subtitle,
+.light .header-conflict-alert .alert-subtitle {
+  color: #B91C1C; /* Dark red: #B91C1C. Contrast 6.2:1 on #FEF2F2 (WCAG AA) */
+}
+
+[data-theme="light"] .header-conflict-alert .alert-icon,
+.light .header-conflict-alert .alert-icon {
+  color: #DC2626; /* Deep red: #DC2626 */
+}
+
+/* Unified Brand Orange Action Button (matches logo primary accent) */
+.btn-brand-orange {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3125rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #EA580C; /* Primary brand railway orange */
+  color: #FFFFFF;
+  font-size: 0.6875rem;     /* 11px */
+  font-weight: 700;
+  border: 1px solid #C2410C;
+  box-shadow: 0 1px 4px rgba(194, 65, 12, 0.25);
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-brand-orange:hover:not(:disabled) {
+  background-color: #C2410C; /* Darker orange on hover */
+  border-color: #9A3412;
+  box-shadow: 0 2px 8px rgba(194, 65, 12, 0.4);
+  transform: translateY(-0.5px);
+}
+
+.btn-brand-orange:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Toast Notification Slide-in Animation
+   Subtle 250ms slide-in from right with slight scaling.
+   ========================================================================== */
+@keyframes toast-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.animate-toast-in {
+  animation: toast-slide-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
