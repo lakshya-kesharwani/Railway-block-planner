@@ -61,9 +61,5 @@ needed. **`.env` files are gitignored and won't be pushed** — see
 - **Frontend:** React, TypeScript, Vite, Tailwind CSS, Groq (Llama /
   GPT-OSS) for the AI Assistant chatbot
 
-## Before you push to GitHub
 
-Rotate the MongoDB password and JWT secret in
-`railway-unified-backend/.env` before this repo is ever made public —
-they were shared in plaintext during development. See `INTEGRATION.md`
-for the full list of other fixes and current limitations.
+
